@@ -20,7 +20,300 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="style.css" />
+    <style>
+      :root {
+        --accent-color: #c70f3e;
+        --text-color: white;
+        --main-font: "Poppins", sans-serif;
+      }
+
+      /* Home Page */
+      .home {
+        background-image: url(images/city.png);
+        max-width: 100%;
+        width: 1920px;
+        height: 900px;
+        background-color: #c70f3e;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        text-align: center;
+      }
+      .hero {
+        color: var(--text-color);
+        font-family: var(--main-font);
+        text-shadow: -2px 3px 4px rgb(199, 15, 62, 0.75);
+        font-weight: 700;
+        font-size: 150px;
+        margin-top: 17%;
+        animation: fadein 2s;
+      }
+      .home-copy {
+        color: var(--text-color);
+        font-family: var(--main-font);
+        font-size: 18px;
+        text-align: center;
+        animation: fadein ease 2s;
+      }
+      .home-button {
+        background-color: var(--accent-color);
+        box-shadow: -2px 5px 5px rgb(0, 0, 0, 0.5);
+        font-weight: 600;
+        font-size: 20px;
+        padding: 10px 35px;
+        border-radius: 40px;
+        border: none;
+        animation: fadein ease 2s;
+      }
+
+      .home-button a {
+        color: var(--text-color);
+        font-family: var(--main-font);
+        text-decoration: none;
+        transition-duration: 0.4s;
+        transition: all 200ms ease;
+      }
+      .home-button:hover {
+        border: 1px solid var(--accent-color);
+        background-color: transparent;
+        color: var(--text-color);
+        cursor: pointer;
+      }
+      /* History Page */
+      #history-section {
+        margin-top: 25%;
+        text-align: center;
+        background-color: #c70f3e;
+        overflow: hidden;
+       
+      }
+      .hero-history {
+        color: var(--text-color);
+        font-family: var(--main-font);
+        text-shadow: -2px 3px 4px rgb(0, 0, 0, 0.75);
+        font-weight: 700;
+        font-size: 50px;
+        margin-top: 3%;
+        animation: fadein 2s;
+      }
+      #chicagoTheater {
+        width: 400px;
+        height: auto;
+      }
+      #chicagoStreet {
+        width: 400px;
+        height: auto;
+      }
+      .section-one {
+        margin-top: 7%;
+        padding-top: 25px;
+      }
+      .section-two {
+        padding-bottom: 25px;
+      }
+
+      .history-full {
+        margin-top: -70px;
+      }
+      .history-full p {
+        color: var(--text-color);
+
+        font-family: var(--main-font);
+      }
+      .history-full h4 {
+        color: var(--text-color);
+        font-weight: 700;
+        font-family: var(--main-font);
+      }
+      /* Visit Page */
+
+      .visit-section {
+        max-width: 100%;
+        height: 750px;
+        text-align: center;
+        background-image: url(images/city-night.png);
+        
+      }
+      .hero-visit {
+        color: var(--text-color);
+        font-family: var(--main-font);
+        text-shadow: -2px 3px 4px rgb(199, 15, 62, 0.75);
+        font-weight: 700;
+        font-size: 50px;
+        margin-top: 6%;
+        animation: fadein 2s;
+      }
+
+      .bean-button,
+      .tower-button,
+      .cubs-button {
+        background-color: var(--accent-color);
+        font-family: var(--main-font);
+      }
+
+      .bean-card,
+      .tower-card,
+      .cubs-card {
+        background-color: rgb(0, 0, 0, 0.75);
+        margin: 0 auto;
+      }
+      .bean-text,
+      .tower-text,
+      .cubs-text {
+        color: var(--text-color);
+      }
+
+      .bean-title,
+      .tower-title,
+      .cubs-title {
+        color: var(--text-color);
+        font-weight: 800;
+      }
+      .card-img-top {
+        width: 100%;
+        height: 30vh;
+        object-fit: contain;
+      }
+
+      .bean-button:hover,
+      .cubs-button:hover,
+      .tower-button:hover {
+        background-color: var(--text-color);
+      }
+      /* Contact Page */
+      #contact-section {
+        background-color: black;
+        max-width: 100%;
+        padding-bottom: 30px;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        text-align: center;
+
+      }
+      .hero-contact {
+        color: var(--text-color);
+        font-family: var(--main-font);
+        text-shadow: -2px 3px 4px rgb(199, 15, 62, 0.75);
+        font-weight: 700;
+        font-size: 70px;
+        text-align: center;
+        animation: fadein 2s;
+        margin-bottom: 10px;
+        padding-top: 20px;
+      }
+
+
+      .email {
+        color: var(--text-color);
+        font-family: var(--main-font);
+        font-size: 40px;
+        animation: fadein ease 2s;
+        text-align: center;
+        margin: 0 auto;
+        text-decoration: none;
+        box-shadow: inset 0 0 0 0 var(--accent-color);
+        color: var(--accent-color);
+        transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      }
+
+      .email:hover {
+        box-shadow: inset 400px 0 0 0 #c70f3e;
+        color: var(--text-color);
+         
+      }
+      .footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        height: 20px;
+        font-size: 15px;
+        font-family: var(--main-font);
+        background-color: black;
+        padding-bottom: 50px;
+      }
+      .footer a {
+        color: var(--text-color);
+      }
+
+      /* Navigation */
+      .page-header {
+        color: var(--text-color);
+        font-family: var(--main-font);
+        font-weight: 700;
+        padding: 10px 20px;
+        font-size: 30px;
+      }
+      .page-header:hover {
+        color: var(--accent-color);
+      }
+      #page-header-link {
+        color: var(--text-color);
+        font-family: var(--main-font);
+        font-weight: 500;
+        font-size: 20px;
+        padding-left: 50px;
+      }
+      #page-header-link:hover {
+        color: var(--accent-color);
+      }
+      .full-navigation {
+        padding-right: 50px;
+      }
+      .navbar-toggler {
+        background-color: var(--accent-color);
+      }
+
+      /* Animations and Responsive */
+      @keyframes fadein {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @media (max-width: 1200px) {
+        #history-section {
+          background-size: auto;
+          margin-top: 55%;
+        }
+        .history-full {
+          margin-top: 0px;
+        }
+        #chicagoTheater,
+        #chicagoStreet {
+          display: block;
+          margin: 0 auto;
+        }
+        .card {
+          margin-bottom: 10px;
+        }
+        .visit-section {
+height: 1100px
+        }
+       
+      }
+
+      @media (max-width: 600px) {
+        .hero {
+          font-size: 70px;
+        }
+        #history-section {
+          background-size: auto;
+          margin-top: 500px;
+        }
+        #contact-section {
+            background-size: auto;
+         
+        }
+        .visit-section {
+            height: 1500px;
+        }
+        
+      }
+    </style>
   </head>
   <body class="home">
     <nav class="navbar navbar-expand-lg">
@@ -49,7 +342,7 @@
                 class="nav-link active"
                 id="page-header-link"
                 aria-current="page"
-                href="history.html"
+                href="#history-section"
                 >History</a
               >
             </li>
@@ -58,7 +351,7 @@
                 class="nav-link active"
                 id="page-header-link"
                 aria-current="page"
-                href="visit.html"
+                href="#visit-box"
                 >Visit</a
               >
             </li>
@@ -67,7 +360,7 @@
                 class="nav-link active"
                 id="page-header-link"
                 aria-current="page"
-                href="contact.html"
+                href="#contact-section"
                 >Contact Me</a
               >
             </li>
@@ -75,23 +368,166 @@
         </div>
       </div>
     </nav>
+    <!-- Homepage Section -->
 
-    <div class="hero-box container d-flex justify-content-center">
-      <h1 class="hero">Chicago</h1>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col home-copy mt-2">
-          Chicago is the best city in the world. <br />
-          With tons to do and see, it is a fantastic place to visit or live.
-          <br />
-          <button class="home-button mt-4">
-            <a href="/history.html">Learn more</a>
-          </button>
+    <div class="container home-section">
+      <div class="hero-box container d-flex justify-content-center">
+        <h1 class="hero">Chicago</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col home-copy mt-2">
+            Chicago is the best city in the world. <br />
+            With tons to do and see, it is a fantastic place to visit or live.
+            <br />
+            <button class="home-button mt-4">
+              <a href="#history-section">Learn more</a>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- History Section -->
+      <section id="history-section">
+        <h1 class="hero-history">History</h1>
+        <div class="history-full">
+          <div class="container section-one">
+            <div class="row">
+              <div class="col-lg-8" id="chicagoTheater">
+                <img
+                  src="images/chicago-history.jpeg"
+                  class="rounded-circle img-fluid"
+                  alt="chicago theater"
+                />
+              </div>
+              <div class="col-lg-8 mt-5">
+                <h4>Chicago was founded in 1830</h4>
+
+                <p class="mt-4">
+                  The first non-Indian to settle within Chicago’s future
+                  boundaries was a Santo Domingan of mixed African and European
+                  ancestry, Jean Baptiste Point du Sable, who arrived around
+                  1780. In October 1871, a fire destroyed one-third of Chicago
+                  and left more than 100,000 homeless. The factories and
+                  railroads were largely spared, and the city rebuilt with
+                  astonishing speed.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="container section-two">
+            <div class="row">
+              <div class="col-lg-8 mt-5">
+                <h4>A Modern City</h4>
+
+                <p class="mt-4">
+                  The 2000 U.S. Census reported Chicago’s first
+                  decade-over-decade population increase since 1950. Immigrants
+                  still flock to the “windy city,” though now from Asia and
+                  Latin America more than Europe. Chicago remains a center of
+                  trade: Airports supplement the old rail and water transit
+                  hubs, and agricultural futures are traded electronically from
+                  the floor of its storied Mercantile Exchange.
+                </p>
+              </div>
+              <div class="col-lg-8" id="chicagoStreet">
+                <img
+                  src="images/chicago-history2.jpg"
+                  class="rounded-circle img-fluid"
+                  alt="chicago street"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Visit Section -->
+    <section id="visit-box">
+    <div class="container visit-section">
+      <div class="hero-box container d-flex justify-content-center">
+        <h1 class="hero-visit mb-5">Things To Do</h1>
+      </div>
+      <div class="container cards-contain">
+        <div class="row">
+          <div class="card bean-card" style="width: 19rem">
+            <img
+              class="card-img-top bean-image"
+              src="images/bean.jpg"
+              alt="the
+          bean"
+            />
+            <div class="card-body">
+              <h5 class="card-title bean-title">The Bean</h5>
+              <p class="card-text bean-text">
+                Designed by Anish Kapoor, this statue is an awesome place to
+                take pictures and enjoy the city skyline.
+              </p>
+              <a
+                href="https://millenniumparkfoundation.org/art-architecture/cloud-gate/"
+                class="btn bean-button"
+                target="_blank"
+                >More Info</a
+              >
+            </div>
+          </div>
+          <div class="card tower-card" style="width: 19rem">
+            <img
+              class="card-img-top tower-image"
+              src="images/tower.jpg"
+              alt="willis tower"
+            />
+            <div class="card-body">
+              <h5 class="card-title tower-title">Willis Tower</h5>
+              <p class="card-text tower-text">
+                The observation deck at the Willis Tower offers amazing views of
+                the city, but it's not for the faint of heart!
+              </p>
+              <a
+                href="https://www.willistower.com/"
+                class="btn tower-button"
+                target="_blank"
+                >More Info</a
+              >
+            </div>
+          </div>
+          <div class="card cubs-card" style="width: 19rem">
+            <img
+              class="card-img-top cubs-image"
+              src="images/cubs.jpg"
+              alt="wrigley field"
+            />
+            <div class="card-body">
+              <h5 class="card-title cubs-title">Cubs Game</h5>
+              <p class="card-text cubs-text">
+                During the season, enjoy a baseball game at Wrigley Field, the
+                oldest ballpark in the National League.
+              </p>
+              <a
+                href="https://www.mlb.com/cubs"
+                target="_blank"
+                class="btn cubs-button"
+                >More Info</a
+              >
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    </section>
+    <!-- Contact Section -->
 
+    <section id="contact-section">
+      <h1 class="hero-contact">Get In Touch:</h1>
+      <a class="email" href="mailto:bridgetgalla@gmail.com"
+        ><strong>Email Me</strong></a
+      >
+    </section>
+    <footer class="footer">
+      <a href="https://github.com/bridgetgall/Chicago-Hometown-Project"
+        >Open-Source Code by Bridget Gallagher</a
+      >
+    </footer>
     <!-- JavaScript Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
